@@ -8,39 +8,39 @@ const ClientsSection = () => {
   const clients = [
     {
       name: "Jindal Steel & Power",
-      logo: "/public/clients/jindal.png"
+      logo: "/clients/jindal.png"
     },
     {
       name: "IFB Industries",
-      logo: "/public/clients/ifb.png"
+      logo: "/clients/ifb.png"
     },
     {
       name: "Crescent Steel",
-      logo: "/public/clients/crescent.png"
+      logo: "/clients/crescent.png"
     },
     {
       name: "Patton Group",
-      logo: "/public/clients/patton.png"
+      logo: "/clients/patton.png"
     },
     {
       name: "Shapoorji Pallonji",
-      logo: "/public/clients/shapoorji.png"
+      logo: "/clients/shapoorji.png"
     },
     {
       name: "Siddha Group",
-      logo: "/public/clients/siddha.png"
+      logo: "/clients/siddha.png"
     },
     {
       name: "Solaris Chemtech",
-      logo: "/public/clients/solaris.jpg"
+      logo: "/clients/solaris.jpg"
     },
     {
       name: "Alcove Realty",
-      logo: "/public/clients/alcove.jpg"
+      logo: "/clients/alcove.jpg"
     },
     {
       name: "Godrej",
-      logo: "/public/clients/godrej.png"
+      logo: "/clients/godrej.png"
     }
   ]
 

@@ -121,7 +121,7 @@ const HeroSection = () => {
           playsInline
           className="hero-section__video"
         >
-          <source src="/public/background/video.mp4" type="video/mp4" />
+          <source src="/background/video.mp4" type="video/mp4" />
         </video>
         <div className="hero-section__video-overlay"></div>
       </div>
