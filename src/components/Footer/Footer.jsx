@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer__section">
             <h3 className="footer__title">Namami Plyboard Pvt. Ltd.</h3>
             <p className="footer__description">
-              Premium CenturyPly distributor in Eastern India, trusted by leading builders and industries since 2008.
+              Leading CenturyPly distributor in Eastern India, trusted by leading builders and industries since 2009.
             </p>
             <div className="footer__social">
               <a href="https://linkedin.com/company/namami-plyboard-pvt-ltd" target="_blank" rel="noopener noreferrer" className="footer__social-link">
@@ -36,8 +36,14 @@ const Footer = () => {
               <p>Choudhary Towers, 42 Andul Road</p>
               <p>Hanskali Pool, Bakultala</p>
               <p>Howrah – 711009</p>
-              <p className="footer__phone">+91 9831275519</p>
-              <p className="footer__email">namamiplyboard09@yahoo.com</p>
+              <div className="footer__contact-group">
+                <p className="footer__phone">+91 9831275519</p>
+                <p className="footer__phone">+91 9830968432</p>
+              </div>
+              <div className="footer__contact-group">
+                <p className="footer__email">namamiplyboard09@yahoo.com</p>
+                <p className="footer__email">namamiplyboardsprivatelimited@gmail.com</p>
+              </div>
             </div>
           </div>
 

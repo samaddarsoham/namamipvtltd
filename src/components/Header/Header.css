@@ -35,6 +35,28 @@
   text-decoration: none;
 }
 
+.logo__container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.logo__image {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid var(--color-deep-red);
+  background-color: white;
+}
+
+.logo__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo__text {
   font-family: var(--font-heading);
   font-size: 1.8rem;

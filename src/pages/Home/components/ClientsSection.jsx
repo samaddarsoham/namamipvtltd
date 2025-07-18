@@ -8,58 +8,39 @@ const ClientsSection = () => {
   const clients = [
     {
       name: "Jindal Steel & Power",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jindal_Steel_and_Power_logo.svg/320px-Jindal_Steel_and_Power_logo.svg.png",
-      fallback: "https://www.jindalsteel.com/images/logo.png"
+      logo: "/public/clients/jindal.png"
     },
     {
       name: "IFB Industries",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/IFB_Industries_logo.svg/320px-IFB_Industries_logo.svg.png",
-      fallback: "https://www.ifbappliances.com/images/logo.png"
+      logo: "/public/clients/ifb.png"
     },
     {
       name: "Crescent Steel",
-      logo: "https://crescentsteel.com/wp-content/uploads/2020/01/crescent-logo.png",
-      fallback: "https://via.placeholder.com/120x60/8B0000/FFFFFF?text=CRESCENT"
+      logo: "/public/clients/crescent.png"
     },
     {
       name: "Patton Group",
-      logo: "https://pattongroup.in/images/logo.png",
-      fallback: "https://via.placeholder.com/120x60/D4AF37/000000?text=PATTON"
+      logo: "/public/clients/patton.png"
     },
     {
       name: "Shapoorji Pallonji",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shapoorji_Pallonji_Group_logo.svg/320px-Shapoorji_Pallonji_Group_logo.svg.png",
-      fallback: "https://www.shapoorjipallonji.com/images/sp-logo.png"
+      logo: "/public/clients/shapoorji.png"
     },
     {
       name: "Siddha Group",
-      logo: "https://siddhagroup.com/images/siddha-logo.png",
-      fallback: "https://via.placeholder.com/120x60/8B0000/FFFFFF?text=SIDDHA"
+      logo: "/public/clients/siddha.png"
     },
     {
       name: "Solaris Chemtech",
-      logo: "https://solarischemtech.com/images/logo.png",
-      fallback: "https://via.placeholder.com/120x60/D4AF37/000000?text=SOLARIS"
+      logo: "/public/clients/solaris.jpg"
     },
     {
       name: "Alcove Realty",
-      logo: "https://alcoverealty.in/images/logo.png",
-      fallback: "https://via.placeholder.com/120x60/8B0000/FFFFFF?text=ALCOVE"
-    },
-    {
-      name: "Tata Steel",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Tata_Steel_Logo.svg/320px-Tata_Steel_Logo.svg.png",
-      fallback: "https://via.placeholder.com/120x60/1F4E79/FFFFFF?text=TATA+STEEL"
+      logo: "/public/clients/alcove.jpg"
     },
     {
       name: "Godrej",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Godrej_logo.svg/320px-Godrej_logo.svg.png",
-      fallback: "https://via.placeholder.com/120x60/228B22/FFFFFF?text=GODREJ"
-    },
-    {
-      name: "Mahindra",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mahindra_Logo.svg/320px-Mahindra_Logo.svg.png",
-      fallback: "https://via.placeholder.com/120x60/C41E3A/FFFFFF?text=MAHINDRA"
+      logo: "/public/clients/godrej.png"
     }
   ]
 
@@ -107,18 +88,8 @@ const ClientsSection = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  onError={(e) => {
-                    if (client.fallback && e.target.src !== client.fallback) {
-                      e.target.src = client.fallback;
-                    } else {
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.fontSize = '0.9rem';
-                      e.target.nextElementSibling.style.fontWeight = '600';
-                      e.target.nextElementSibling.style.color = 'var(--color-deep-red)';
-                    }
-                  }}
+                  className="client-logo-image"
                 />
-                <span className="client-name">{client.name}</span>
               </div>
             ))}
           </div>
@@ -136,11 +107,11 @@ const ClientsSection = () => {
             <p className="stat-label">Years of Excellence</p>
           </div>
           <div className="stat-item">
-            <h3 className="stat-number">500+</h3>
+            <h3 className="stat-number">5000+</h3>
             <p className="stat-label">Projects Completed</p>
           </div>
           <div className="stat-item">
-            <h3 className="stat-number">50+</h3>
+            <h3 className="stat-number">150+</h3>
             <p className="stat-label">Industry Partners</p>
           </div>
           <div className="stat-item">

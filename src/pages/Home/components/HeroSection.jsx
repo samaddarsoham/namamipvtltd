@@ -8,6 +8,13 @@ const HeroSection = () => {
   const textRef = useRef(null)
   const overlayRef = useRef(null)
   const rotatingTextRef = useRef(null)
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75; // Slow down video playback
+    }
+  }, []);
 
   // Rotating text state
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
@@ -105,6 +112,19 @@ const HeroSection = () => {
 
   return (
     <section ref={heroRef} className="hero-section">
+      <div className="hero-section__video-container">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-section__video"
+        >
+          <source src="/public/background/video.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-section__video-overlay"></div>
+      </div>
       <div className="hero-section__container">
         <div className="hero-section__content">
           <div ref={textRef} className="hero-section__text">

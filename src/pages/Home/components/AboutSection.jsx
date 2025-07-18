@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 const AboutSection = () => {
   const achievements = [
     {
-      year: "2008",
+      year: "2009",
       title: "Established",
       description: "Founded with a vision to serve Eastern India"
     },
     {
-      year: "2015",
+      year: "2012",
       title: "Royal Club Member",
       description: "Achieved prestigious status with CenturyPly"
     },

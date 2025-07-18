@@ -13,7 +13,7 @@ const Contact = () => {
     {
       name: "Mr. Suresh Aggarwal",
       phone: "+91 9830968432",
-      role: "Manager"
+      role: "Director"
     },
     {
       name: "Akash",
@@ -91,11 +91,18 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <h4>Social Media</h4>
-                  <p>
-                    <a href="https://linkedin.com/company/namami-plyboard-pvt-ltd" target="_blank" rel="noopener noreferrer">
-                      LinkedIn: Namami Plyboard Pvt. Ltd.
-                    </a>
-                  </p>
+                  <div className="social-links">
+                    <p>
+                      <a href="https://linkedin.com/company/namami-plyboard-pvt-ltd" target="_blank" rel="noopener noreferrer">
+                        LinkedIn: Namami Plyboard Pvt. Ltd.
+                      </a>
+                    </p>
+                    <p>
+                      <a href="https://www.instagram.com/namamiplyboardpvtltd2009?igsh=MW5tampub3RtZXl3bg==" target="_blank" rel="noopener noreferrer">
+                        Instagram: Namami Plyboard Pvt. Ltd.
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -110,14 +117,14 @@ const Contact = () => {
             <h3>Find Us</h3>
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.1234567890123!2d88.2876543210987!3d22.6123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM2JzQ0LjQiTiA4OMKwMTcnMTUuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.599044793401!2d88.31344731441787!3d22.59338403762254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277c5333ea2e7%3A0x9c1018a8505ce075!2sNamami+Plyboard+Pvt+Ltd!5e0!3m2!1sen!2sin!4v1690273946284!5m2!1sen!2sin&markers=color:red%7C22.59338403762254,88.31344731441787"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Namami Plyboard Location"
+                title="Namami Plyboard Location - Choudhary Towers, 42 Andul Road"
               ></iframe>
             </div>
           </motion.div>

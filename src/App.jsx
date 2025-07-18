@@ -8,6 +8,7 @@ import Products from './pages/Products/Products'
 import Contact from './pages/Contact/Contact'
 import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import './styles/global.css'
+import Team from './pages/Team/Team'
 
 // Component to handle scroll reset on route change
 function ScrollToTop() {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

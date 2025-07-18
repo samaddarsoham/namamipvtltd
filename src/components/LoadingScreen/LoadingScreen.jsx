@@ -30,7 +30,7 @@ const LoadingScreen = () => {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               <h1 className="loading-screen__title">Namami Plyboard</h1>
-              <p className="loading-screen__subtitle">Premium CenturyPly Distributor</p>
+              <p className="loading-screen__subtitle">Leading CenturyPly Distributor</p>
             </motion.div>
 
             <motion.div

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './Header.css'
 
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -21,7 +22,8 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Products', path: '/products' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Team', path: '/team' }
   ]
 
   return (
@@ -36,9 +38,13 @@ const Header = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
+            className="logo__container"
           >
-            <h1 className="logo__text">Namami Plyboard</h1>
-            <span className="logo__subtitle">Premium CenturyPly Distributor</span>
+            <img src="/background/logo.png" alt="Namami Plyboard Logo" className="logo__image" />
+            <div className="logo__text-container">
+              <h1 className="logo__text">Namami Plyboard</h1>
+              <span className="logo__subtitle">Leading CenturyPly Distributor</span>
+            </div>
           </motion.div>
         </Link>
 

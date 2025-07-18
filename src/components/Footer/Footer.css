@@ -49,6 +49,24 @@
   margin-bottom: var(--space-md);
 }
 
+.footer__contact-group {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.footer__phone,
+.footer__email {
+  color: var(--color-royal-gold);
+  font-size: 0.95rem;
+  margin: var(--space-xs) 0;
+  transition: color var(--transition-base);
+}
+
+.footer__phone:hover,
+.footer__email:hover {
+  color: var(--color-white);
+}
+
 /* Social Links */
 .footer__social {
   display: flex;

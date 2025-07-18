@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Professional business website for Namami Plyboard Pvt. Ltd. - Premium CenturyPly distributor",
+  "description": "Professional business website for Namami Plyboard Pvt. Ltd. - Leading CenturyPly distributor",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

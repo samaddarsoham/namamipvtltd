@@ -1,99 +1,92 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import './About.css'
 
 const About = () => {
+  const timelineData = [
+    {
+      year: "2009",
+      image: "/background/company.jpg",
+      title: "Company Established",
+      description: "Founded with a vision to provide premium wood products to Eastern India"
+    },
+    {
+      year: "2009",
+      image: "/background/partner.jpg",
+      title: "CenturyPly Partnership",
+      description: "Became an authorized distributor of CenturyPly products"
+    },
+    {
+      year: "2012",
+      image: "/background/crown.png",
+      title: "Royal Club Member",
+      description: "Achieved Royal Club Member status with CenturyPly"
+    },
+    {
+      year: "2012",
+      image: "/background/leader.jpg",
+      title: "Leading Distributor",
+      description: "Supplying to top builders: Shapoorji Pallonji, Siddha, Solaris, and Alcove"
+    },
+    {
+      year: "2014",
+      image: "/background/fame.jpg",
+      title: "Industry Recognition",
+      description: "Trusted OEM supplier to major industries including Jindal, IFB, and Crescent"
+    }
+  ];
+
   return (
-    <motion.div 
-      className="about-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="about-page">
       <div className="about-page__container">
-        <motion.h1 
-          className="about-page__title"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-        >
+        <h1 className="about-page__title">
           About Namami Plyboard
-        </motion.h1>
+        </h1>
         
-        <motion.p 
-          className="about-page__subtitle"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
+        <p className="about-page__subtitle">
           Your Trusted Partner in Premium Wood Solutions
-        </motion.p>
+        </p>
 
         <div className="about-page__content">
-          <motion.div 
-            className="about-timeline"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-          >
-            <div className="timeline-item">
-              <div className="timeline-year">2008</div>
-              <div className="timeline-content">
-                <h3>Company Established</h3>
-                <p>Founded with a vision to provide premium wood products to Eastern India</p>
-              </div>
-            </div>
+          <div className="about-timeline">
+            {timelineData.map((item, index) => (
+              <div key={index} className="timeline-item">
+                <div className="timeline-year timeline-year--image">
+                  <img 
+                    src={item.image}
+                    alt={item.title}
+                    className="timeline-year__image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="timeline-year__fallback">
+                    {item.year}
+                  </div>
+                </div>
 
-            <div className="timeline-item">
-              <div className="timeline-year">2010</div>
-              <div className="timeline-content">
-                <h3>CenturyPly Partnership</h3>
-                <p>Became an authorized distributor of CenturyPly products</p>
+                <div className={`timeline-content timeline-content--golden ${index % 2 === 1 ? 'timeline-content--left-year' : ''}`}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="timeline-content__year">
+                    <span className="timeline-content__year-text">{item.year}</span>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
 
-            <div className="timeline-item">
-              <div className="timeline-year">2015</div>
-              <div className="timeline-content">
-                <h3>Royal Club Member</h3>
-                <p>Achieved Royal Club Member status with CenturyPly</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-year">2020</div>
-              <div className="timeline-content">
-                <h3>Industry Recognition</h3>
-                <p>Trusted OEM supplier to major industries including Jindal, IFB, and Crescent</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-year">2024</div>
-              <div className="timeline-content">
-                <h3>Leading Distributor</h3>
-                <p>Supplying to top builders: Shapoorji Pallonji, Siddha, Solaris, and Alcove</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="about-page__cta"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            <Link to="/products" className="btn btn--primary btn--large">
+          <div className="about-page__cta">
+            <a href="/products" className="btn btn--primary btn--large">
               Explore Our Products
-            </Link>
-            <Link to="/contact" className="btn btn--secondary btn--large">
+            </a>
+            <a href="/contact" className="btn btn--secondary btn--large">
               Get in Touch
-            </Link>
-          </motion.div>
+            </a>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

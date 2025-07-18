@@ -242,7 +242,7 @@ const HeroSection = () => {
               </h1>
               
               <p ref={subtitleRef} className="hero-subtitle">
-                CenturyPly Royal Club Distributor | Since 2008
+                CenturyPly Royal Club Distributor | Since 2009
               </p>
 
               {/* CTA Button */}
