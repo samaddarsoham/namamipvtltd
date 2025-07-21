@@ -7,7 +7,7 @@ const ProductsPreview = () => {
     {
       name: "Premium Plywood",
       description: "BWR, MR, and BWP grades for all applications",
-      image: "/images/Plywood.jpg",
+      image: "/images/Plywood.png",
       features: ["Water Resistant", "Termite Proof", "High Strength"]
     },
     {
@@ -19,13 +19,13 @@ const ProductsPreview = () => {
     {
       name: "Teak Wood Products",
       description: "Authentic teak for luxury applications",
-      image: "/images/TeakWoodProducts,jpg.jpeg",
+      image: "/images/TeakWoodProducts,jpg.png",
       features: ["Natural Beauty", "Durable", "Premium Quality"]
     }
   ]
 
   return (
-    <section className="products-preview scroll-reveal">
+    <section className="products-preview scroll-reveal mobile-center-all">
       <div className="products-preview__container">
         <motion.div 
           className="products-preview__header"
@@ -58,11 +58,6 @@ const ProductsPreview = () => {
                     e.target.parentElement.style.background = 'linear-gradient(135deg, var(--color-gray-light), var(--color-gray-medium))';
                   }}
                 />
-                <div className="product-preview-card__overlay">
-                  <Link to="/products" className="product-preview-card__cta">
-                    View Details
-                  </Link>
-                </div>
               </div>
 
               <div className="product-preview-card__content">

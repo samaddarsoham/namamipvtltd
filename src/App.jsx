@@ -8,6 +8,7 @@ import Products from './pages/Products/Products'
 import Contact from './pages/Contact/Contact'
 import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import './styles/global.css'
+import './styles/responsive.css'
 import Team from './pages/Team/Team'
 
 // Component to handle scroll reset on route change

@@ -41,7 +41,7 @@ const Products = () => {
       types: ["BWR (Boiling Water Resistant)", "MR (Moisture Resistant)", "BWP (Boiling Water Proof)"],
       description: "Premium quality plywood for all construction and furniture needs",
       image: "/images/Plywood.png",
-      brands: ["CenturyPly", "Rhino Tuff", "Glacier Gold", "Adhunik Ultra", "Bell Ply"]
+      brands: ["CenturyPly", "Rhyno Tuff", "Glacier Gold", "Adhunik Ultra", "Bell Ply"]
     },
     {
       id: 2,
@@ -65,7 +65,7 @@ const Products = () => {
       types: ["Standard Grade", "Premium Grade", "Marine Grade"],
       description: "Sturdy block boards for heavy-duty construction",
       image: "/images/BlockBoards.jpg",
-      brands: ["CenturyPly", "Rhino Tuff", "Glacier Gold", "Adhunik Ultra", "Bell Ply", "Rhino Tuff - 30/710"]
+      brands: ["CenturyPly", "Rhyno Tuff", "Glacier Gold", "Adhunik Ultra", "Bell Ply", "Rhyno Tuff - 30/710"]
     },
     {
       id: 5,
@@ -73,7 +73,7 @@ const Products = () => {
       types: ["Solid Core", "Hollow Core", "Fire Resistant"],
       description: "Durable and elegant flush doors for residential and commercial use",
       image: "/images/FlushDoors.jpg",
-      brands: ["Century", "Rhino Tuff (Full Pine)"]
+      brands: ["Century", "Rhyno Tuff (Full Pine)"]
     },
     {
       id: 6,
@@ -102,8 +102,8 @@ const Products = () => {
   ]
 
   return (
-    <motion.div 
-      className="products-page"
+    <motion.div
+      className="products-page mobile-center-all"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -120,7 +120,7 @@ const Products = () => {
           <div className="company-brands">
             {[
               "Century Ply",
-              "Rhino Tuff",
+              "Rhyno Tuff",
               "Glacier Gold",
               "Adhunik Ultra",
               "Bell Ply",

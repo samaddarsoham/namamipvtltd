@@ -520,10 +520,11 @@
   letter-spacing: 0.5px;
 }
 
-/* Professional Why Choose Us Section */
+/* Enhanced Responsive Why Choose Us Section */
 .why-choose-section {
   background: var(--bg-primary);
   position: relative;
+  padding: clamp(var(--space-2xl), 8vh, var(--space-4xl)) 0;
 }
 
 .why-choose-section::before {
@@ -540,18 +541,21 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: clamp(var(--space-lg), 4vw, var(--space-2xl));
+  margin-bottom: clamp(var(--space-xl), 5vh, var(--space-3xl));
 }
 
 .feature-card {
   background: white;
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: clamp(12px, 2vw, 16px);
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
   transition: all 0.3s ease;
   text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .feature-card:hover {
@@ -560,76 +564,90 @@
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: clamp(var(--space-md), 3vw, var(--space-lg));
   background: rgba(220, 20, 60, 0.1);
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 12vw, 80px);
+  height: clamp(60px, 12vw, 80px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto clamp(var(--space-md), 3vw, var(--space-lg));
 }
 
 .feature-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw + 0.25rem, 1.8rem);
   font-weight: 600;
   color: #2c1810;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(var(--space-sm), 2vw, var(--space-md));
+  line-height: 1.3;
+  text-align: center;
 }
 
 .feature-description {
   font-family: 'Inter', sans-serif;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(var(--space-md), 3vw, var(--space-lg));
+  font-size: clamp(0.9rem, 1.5vw + 0.1rem, 1.1rem);
+  text-align: center;
 }
 
 .feature-benefits {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(var(--space-xs), 1vw, var(--space-sm));
+  align-items: center;
 }
 
 .benefit-tag {
   background: rgba(220, 20, 60, 0.05);
   color: #DC143C;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: clamp(var(--space-xs), 1.5vw, var(--space-sm)) clamp(var(--space-sm), 2vw, var(--space-md));
+  border-radius: var(--radius-sm);
+  font-size: clamp(0.8rem, 1.2vw + 0.05rem, 0.95rem);
   font-weight: 500;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
 }
 
 .achievements-section {
   background: rgba(220, 20, 60, 0.02);
-  padding: 3rem 2rem;
-  border-radius: 16px;
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl)) clamp(var(--space-md), 3vw, var(--space-xl));
+  border-radius: clamp(12px, 2vw, 16px);
   border: 1px solid rgba(220, 20, 60, 0.1);
+  text-align: center;
 }
 
 .achievements-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem);
   font-weight: 600;
   color: #2c1810;
+  text-align: center;
+  margin-bottom: clamp(var(--space-lg), 4vw, var(--space-2xl));
+  line-height: 1.2;
 }
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: clamp(var(--space-md), 3vw, var(--space-xl));
+  justify-items: center;
 }
 
 .achievement-badge {
   background: white;
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: clamp(12px, 2vw, 16px);
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl));
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 350px;
 }
 
 .achievement-badge:hover {
@@ -638,73 +656,89 @@
 }
 
 .achievement-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(var(--space-sm), 2vw, var(--space-md));
 }
 
 .achievement-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 2.5vw + 0.1rem, 1.4rem);
   font-weight: 600;
   color: #2c1810;
-  margin-bottom: 0.5rem;
+  margin-bottom: clamp(var(--space-xs), 1vw, var(--space-sm));
+  line-height: 1.3;
+  text-align: center;
 }
 
 .achievement-description {
   font-family: 'Inter', sans-serif;
   color: #666;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 1.2vw + 0.05rem, 1rem);
+  line-height: 1.5;
+  text-align: center;
 }
 
 .value-proposition {
   background: rgba(220, 20, 60, 0.02);
-  padding: 3rem 2rem;
-  border-radius: 16px;
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl)) clamp(var(--space-md), 3vw, var(--space-xl));
+  border-radius: clamp(12px, 2vw, 16px);
   border: 1px solid rgba(220, 20, 60, 0.1);
+  text-align: center;
 }
 
 .value-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: clamp(var(--space-lg), 4vw, var(--space-2xl));
   align-items: center;
+  text-align: center;
 }
 
 .value-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem);
   font-weight: 600;
   color: #2c1810;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(var(--space-sm), 2vw, var(--space-md));
+  line-height: 1.2;
+  text-align: center;
 }
 
 .value-description {
   font-family: 'Inter', sans-serif;
   color: #666;
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.6;
+  margin-bottom: clamp(var(--space-md), 3vw, var(--space-xl));
+  font-size: clamp(0.9rem, 1.5vw + 0.1rem, 1.1rem);
+  text-align: center;
 }
 
 .value-highlights {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: clamp(var(--space-sm), 2vw, var(--space-md));
+  align-items: center;
+  text-align: center;
 }
 
 .highlight-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: clamp(var(--space-xs), 1.5vw, var(--space-sm));
+  justify-content: center;
+  text-align: center;
 }
 
 .highlight-icon {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 .highlight-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #2c1810;
+  font-size: clamp(0.9rem, 1.5vw + 0.05rem, 1.1rem);
+  text-align: center;
 }
 
 .value-image .image-placeholder {
@@ -720,16 +754,39 @@
 
 .why-choose-cta {
   background: rgba(220, 20, 60, 0.05);
-  padding: 3rem 2rem;
-  border-radius: 16px;
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl)) clamp(var(--space-md), 3vw, var(--space-xl));
+  border-radius: clamp(12px, 2vw, 16px);
   border: 1px solid rgba(220, 20, 60, 0.1);
+  text-align: center;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-title {
+  font-size: clamp(1.4rem, 3.5vw + 0.25rem, 2.2rem);
+  font-weight: 600;
+  color: #2c1810;
+  margin-bottom: clamp(var(--space-sm), 2vw, var(--space-md));
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cta-description {
+  font-size: clamp(0.9rem, 1.5vw + 0.1rem, 1.1rem);
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: clamp(var(--space-md), 3vw, var(--space-xl));
+  text-align: center;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: clamp(var(--space-sm), 2vw, var(--space-md));
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .cta-button.primary {
@@ -801,5 +858,146 @@
   .cta-button {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+/* Enhanced Mobile-First Responsive Design for Why Choose Us */
+
+/* Mobile Portrait (320px to 479px) - Force Center Alignment */
+@media (max-width: 479px) {
+  .why-choose-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .why-choose-section *,
+  .features-grid *,
+  .achievements-section *,
+  .value-proposition *,
+  .why-choose-cta * {
+    text-align: center !important;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .feature-card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .feature-benefits {
+    align-items: center;
+  }
+
+  .benefit-tag {
+    text-align: center !important;
+    max-width: 100%;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .achievement-badge {
+    max-width: 100%;
+  }
+
+  .value-content {
+    grid-template-columns: 1fr;
+    text-align: center !important;
+  }
+
+  .value-highlights {
+    align-items: center;
+  }
+
+  .highlight-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-base);
+    min-height: 48px;
+    text-align: center !important;
+  }
+}
+
+/* Small Tablets and Mobile Landscape (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+
+  .cta-button {
+    flex: 1;
+    max-width: 200px;
+  }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-2xl);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .value-content {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .value-title,
+  .value-description {
+    text-align: left;
+  }
+
+  .value-highlights {
+    align-items: flex-start;
+  }
+
+  .highlight-item {
+    justify-content: flex-start;
+  }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

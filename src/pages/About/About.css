@@ -1,12 +1,12 @@
 /* About Page Styles */
 .about-page {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: clamp(80px, 10vh, 100px);
   background: var(--color-white);
 }
 
 .about-page__container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
   padding: 0 var(--space-lg);
   width: 100%;
@@ -14,35 +14,40 @@
 
 .about-page__title {
   text-align: center;
+  font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
   color: var(--color-deep-red);
   margin-bottom: var(--space-md);
+  line-height: 1.2;
 }
 
 .about-page__subtitle {
   text-align: center;
   font-family: var(--font-accent);
   color: var(--color-royal-gold);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw + 0.25rem, 1.8rem);
   font-style: italic;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: clamp(var(--space-xl), 4vh, var(--space-3xl));
+  line-height: 1.4;
 }
 
 .about-page__content {
-  max-width: 900px;
+  max-width: clamp(600px, 80vw, 1000px);
   margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
-/* Timeline Styles */
+/* Enhanced Timeline Styles */
 .about-timeline {
   position: relative;
-  padding: var(--space-xl) 0;
+  padding: clamp(var(--space-lg), 4vh, var(--space-xl)) 0;
 }
 
 .timeline-item {
   display: flex;
   align-items: center;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: clamp(var(--space-xl), 5vh, var(--space-3xl));
   position: relative;
+  gap: clamp(var(--space-md), 3vw, var(--space-xl));
 }
 
 .timeline-item:nth-child(even) {
@@ -53,26 +58,26 @@
   text-align: right;
 }
 
-/* Timeline Year */
+/* Responsive Timeline Year */
 .timeline-year {
-  flex: 0 0 120px;
+  flex: 0 0 clamp(80px, 12vw, 120px);
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
   font-weight: 900;
   color: var(--color-royal-gold);
   text-align: center;
   background: var(--color-white);
-  border: 4px solid var(--color-royal-gold, #DAA520);
+  border: clamp(2px, 0.5vw, 4px) solid var(--color-royal-gold);
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: clamp(80px, 12vw, 120px);
+  height: clamp(80px, 12vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
 }
 
 /* Golden Glow Animation */
@@ -120,22 +125,23 @@
   display: flex;
 }
 
-/* Timeline Content */
+/* Enhanced Timeline Content */
 .timeline-content {
   flex: 1;
-  padding: var(--space-lg);
+  padding: clamp(var(--space-md), 3vw, var(--space-lg));
   background: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  margin: 0 var(--space-xl);
+  margin: 0 clamp(var(--space-sm), 2vw, var(--space-xl));
   border: 1px solid var(--color-gray-medium);
   transition: all var(--transition-base);
   position: relative;
+  max-width: clamp(300px, 50vw, 600px);
 }
 
 .timeline-content:hover {
   box-shadow: var(--shadow-medium);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .timeline-content--golden {
@@ -158,13 +164,15 @@
 .timeline-content h3 {
   color: var(--color-deep-red);
   margin-bottom: var(--space-sm);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw + 0.25rem, 1.8rem);
+  line-height: 1.3;
 }
 
 .timeline-content p {
   color: var(--color-gray-dark);
   margin: 0;
   line-height: 1.6;
+  font-size: clamp(0.9rem, 1.5vw + 0.1rem, 1.1rem);
 }
 
 /* Year Badge */
@@ -197,12 +205,53 @@
   text-align: center;
   margin-top: var(--space-3xl);
   padding: var(--space-xl);
-  background: var(--color-gray-light);
+  background: linear-gradient(135deg, var(--color-deep-red), var(--color-red-dark));
+  color: var(--color-white);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+.about-page__cta h3 {
+  color: var(--color-royal-gold);
+  margin-bottom: var(--space-sm);
+  font-size: 1.8rem;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.about-page__cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-lg);
+  font-size: 1.1rem;
+}
+
+.about-cta-buttons {
   display: flex;
   gap: var(--space-lg);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.about-page__cta .btn--primary {
+  background: var(--color-royal-gold);
+  color: var(--color-charcoal);
+  border: 2px solid var(--color-royal-gold);
+}
+
+.about-page__cta .btn--primary:hover {
+  background: var(--color-white);
+  color: var(--color-deep-red);
+  border-color: var(--color-white);
+}
+
+.about-page__cta .btn--secondary {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.about-page__cta .btn--secondary:hover {
+  background: var(--color-white);
+  color: var(--color-deep-red);
 }
 
 /* Button Styles */
@@ -245,34 +294,37 @@
   font-size: 1rem;
 }
 
-/* Responsive Design */
-/* Large Devices (992px to 1399px) */
-@media (max-width: 1399px) {
-  .about-page__container {
-    max-width: 1200px;
-    padding: 0 var(--space-lg);
-  }
-}
+/* Enhanced Responsive Design for About Page */
 
-/* Medium Devices (768px to 991px) */
-@media (max-width: 991px) {
+/* Large Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
   .about-page__container {
-    max-width: 960px;
+    max-width: var(--container-md);
     padding: 0 var(--space-md);
   }
+
+  .timeline-item {
+    gap: var(--space-md);
+  }
+
+  .timeline-content {
+    margin: 0 var(--space-md);
+    max-width: 400px;
+  }
 }
 
-/* Small Devices (576px to 767px) */
-@media (max-width: 767px) {
+/* Small Tablets and Mobile Landscape (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
   .about-page__container {
-    max-width: 540px;
+    max-width: var(--container-sm);
     padding: 0 var(--space-sm);
   }
 
   .timeline-item {
     flex-direction: column !important;
     align-items: flex-start;
-    margin-left: 80px;
+    margin-left: clamp(60px, 15vw, 80px);
+    gap: var(--space-sm);
   }
 
   .timeline-item:nth-child(even) .timeline-content {
@@ -281,52 +333,68 @@
 
   .timeline-year {
     position: absolute;
-    left: -40px;
+    left: clamp(-35px, -8vw, -40px);
     top: 0;
-    width: 80px;
-    height: 80px;
-    font-size: 1.5rem;
+    width: clamp(60px, 12vw, 80px);
+    height: clamp(60px, 12vw, 80px);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   }
 
   .timeline-content {
     margin: var(--space-md) 0 0 0;
     width: 100%;
+    max-width: none;
   }
 
   .timeline-content__year {
     position: static;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: var(--space-sm);
   }
 }
 
-/* Extra Small Devices (320px to 575px) */
-@media (max-width: 575px) {
+/* Mobile Portrait (320px to 479px) */
+@media (max-width: 479px) {
   .about-page__container {
     max-width: 100%;
-    padding: 0 var(--space-xs);
+    padding: 0 var(--space-sm);
+  }
+
+  .about-page__title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .about-page__subtitle {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    margin-bottom: var(--space-xl);
   }
 
   .timeline-item {
-    margin-left: 60px;
+    margin-left: clamp(50px, 12vw, 60px);
+    margin-bottom: var(--space-xl);
   }
 
   .timeline-year {
-    left: -30px;
-    width: 60px;
-    height: 60px;
-    font-size: 1.2rem;
+    left: clamp(-25px, -6vw, -30px);
+    width: clamp(50px, 10vw, 60px);
+    height: clamp(50px, 10vw, 60px);
+    font-size: clamp(1rem, 2vw, 1.2rem);
   }
 
   .timeline-content {
     padding: var(--space-md);
+    margin: var(--space-sm) 0 0 0;
   }
 
   .timeline-content h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
   }
 
-  .about-page__cta {
+  .timeline-content p {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+
+  .about-cta-buttons {
     flex-direction: column;
     gap: var(--space-md);
   }

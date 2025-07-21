@@ -139,7 +139,7 @@ const WhyChooseUs = () => {
   }
 
   return (
-    <section ref={sectionRef} className="why-choose-section py-20 bg-white">
+    <section ref={sectionRef} className="why-choose-section py-20 bg-white mobile-center-all">
       <div className="container-custom">
         <motion.div
           variants={containerVariants}

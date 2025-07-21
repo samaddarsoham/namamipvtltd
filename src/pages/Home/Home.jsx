@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import ProductsPreview from './components/ProductsPreview'
+import IndustriesSection from './components/IndustriesSection'
 import ClientsSection from './components/ClientsSection'
 import './Home.css'
 
@@ -44,6 +45,7 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <ProductsPreview />
+      <IndustriesSection />
       <ClientsSection />
     </motion.div>
   )

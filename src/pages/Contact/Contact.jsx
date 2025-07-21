@@ -23,8 +23,8 @@ const Contact = () => {
   ]
 
   return (
-    <motion.div 
-      className="contact-page"
+    <motion.div
+      className="contact-page mobile-center-all"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -78,14 +78,13 @@ const Contact = () => {
                 <div className="contact-item">
                   <h4>Email</h4>
                   <p><a href="mailto:namamiplyboard09@yahoo.com">namamiplyboard09@yahoo.com</a></p>
-                  <p><a href="mailto:namamiplyboardsprivatelimited@gmail.com">namamiplyboardsprivatelimited@gmail.com</a></p>
                 </div>
 
                 <div className="contact-item">
                   <h4>Address</h4>
                   <p>Choudhary Towers, 42 Andul Road</p>
-                  <p>Hanskali Pool, Bakultala</p>
-                  <p>Howrah – 711009</p>
+                  <p>Hanskhali Pool, Bakultala</p>
+                  <p>Howrah – 711109</p>
                   <p>West Bengal, India</p>
                 </div>
 

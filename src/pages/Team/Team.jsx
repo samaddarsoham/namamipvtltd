@@ -6,18 +6,18 @@ const teamMembers = [
   {
     name: "Mr. Vineet Fatehpuria",
     phone: "+91 9831275519",
-    image: "/background/person.jpg",
+    image: "/images/VineetFatehpuria.png",
   },
   {
     name: "Mr. Suresh Aggarwal",
     phone: "+91 9830968432",
-    image: "/background/person.jpg",
+    image: "/images/SureshAggarwal.png",
   },
 ];
 
 const Team = () => {
   return (
-    <section className="team-section" id="team">
+    <section className="team-section mobile-center-all" id="team">
       <h2 className="team-heading">
         <span className="maroon">Meet Our </span>
         <span className="gold">Board Of Directors</span>

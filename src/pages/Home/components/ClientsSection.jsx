@@ -62,7 +62,7 @@ const ClientsSection = () => {
   }, [])
 
   return (
-    <section className="clients-section scroll-reveal">
+    <section className="clients-section scroll-reveal mobile-center-all">
       <div className="clients-section__container">
         <motion.div 
           className="clients-section__header"

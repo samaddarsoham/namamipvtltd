@@ -89,7 +89,7 @@ const About = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="min-h-screen pt-20"
+      className="min-h-screen pt-20 mobile-center-all"
     >
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">

@@ -174,7 +174,7 @@ const ProductCatalog = () => {
   }
 
   return (
-    <section ref={sectionRef} className="products-section py-20 bg-gray-50">
+    <section ref={sectionRef} className="products-section py-20 bg-gray-50 mobile-center-all">
       <div className="container-custom">
         <motion.div
           variants={containerVariants}

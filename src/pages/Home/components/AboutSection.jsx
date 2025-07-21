@@ -14,19 +14,19 @@ const AboutSection = () => {
       description: "Achieved prestigious status with CenturyPly"
     },
     {
-      year: "2020",
+      year: "2014",
       title: "Industry Trust",
       description: "Trusted by Jindal, IFB, Crescent, Patton"
     },
     {
-      year: "2024",
+      year: "2015",
       title: "Leading Supplier",
       description: "Supplying Shapoorji, Siddha, Solaris, Alcove"
     }
   ]
 
   return (
-    <section className="about-section scroll-reveal">
+    <section className="about-section scroll-reveal mobile-center-all">
       <div className="about-section__container">
         <motion.div 
           className="about-section__header"
@@ -47,7 +47,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3>Excellence Since 2008</h3>
+            <h3>Excellence Since 2009</h3>
             <p>
               As a Royal Club Member of CenturyPly, we have been serving Eastern India with 
               premium wood products and unmatched quality. Our commitment to excellence has 

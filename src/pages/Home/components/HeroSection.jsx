@@ -129,7 +129,7 @@ const HeroSection = () => {
         <div className="hero-section__content">
           <div ref={textRef} className="hero-section__text">
             <motion.h1 className="hero-section__title">
-              Powering East India's{' '}
+              <span className="hero-section__title-white">Powering West Bengal's</span>{' '}
               <span
                 ref={rotatingTextRef}
                 className="hero-section__rotating-text"
@@ -137,7 +137,7 @@ const HeroSection = () => {
                 {rotatingWords[currentWordIndex]}
               </span>
             </motion.h1>
-            <motion.h2 className="hero-section__subtitle">
+            <motion.h2 className="hero-section__subtitle hero-section__title-white">
               with CenturyPly
             </motion.h2>
             <motion.p className="hero-section__description">

@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer mobile-center-all">
       <div className="footer__container">
         <div className="footer__content">
           <div className="footer__section">
@@ -34,15 +34,14 @@ const Footer = () => {
             <h4 className="footer__subtitle">Contact Info</h4>
             <div className="footer__contact">
               <p>Choudhary Towers, 42 Andul Road</p>
-              <p>Hanskali Pool, Bakultala</p>
-              <p>Howrah – 711009</p>
+              <p>Hanskhali Pool, Bakultala</p>
+              <p>Howrah – 711109</p>
               <div className="footer__contact-group">
                 <p className="footer__phone">+91 9831275519</p>
                 <p className="footer__phone">+91 9830968432</p>
               </div>
               <div className="footer__contact-group">
                 <p className="footer__email">namamiplyboard09@yahoo.com</p>
-                <p className="footer__email">namamiplyboardsprivatelimited@gmail.com</p>
               </div>
             </div>
           </div>

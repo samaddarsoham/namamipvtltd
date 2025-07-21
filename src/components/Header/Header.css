@@ -17,13 +17,13 @@
 }
 
 .header__container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
   padding: 0 var(--space-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: clamp(60px, 8vh, 80px);
   width: 100%;
   position: relative;
 }
@@ -42,39 +42,43 @@
 }
 
 .logo__image {
-  height: 70px;
-  width: 70px;
+  height: clamp(50px, 6vw, 70px);
+  width: clamp(50px, 6vw, 70px);
   object-fit: contain;
   border-radius: 50%;
-  padding: 8px;
+  padding: clamp(4px, 1vw, 8px);
   border: 2px solid var(--color-deep-red);
   background-color: white;
+  transition: all var(--transition-base);
 }
 
 .logo__text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: var(--space-sm);
 }
 
 .logo__text {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 900;
   color: var(--color-deep-red);
   margin: 0;
   line-height: 1;
+  transition: all var(--transition-base);
 }
 
 .logo__subtitle {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
   color: var(--color-royal-gold);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2px;
   display: block;
+  transition: all var(--transition-base);
 }
 
 /* Navigation Styles */
@@ -85,10 +89,11 @@
 
 .nav__list {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: var(--space-lg);
+  gap: clamp(var(--space-md), 3vw, var(--space-xl));
 }
 
 .nav__item {
@@ -97,13 +102,15 @@
 
 .nav__link {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   font-weight: 500;
   color: var(--color-charcoal);
   text-decoration: none;
-  padding: var(--space-sm) 0;
+  padding: var(--space-sm) var(--space-xs);
   position: relative;
   transition: all var(--transition-base);
+  white-space: nowrap;
+  display: block;
 }
 
 .nav__link:hover {
@@ -212,14 +219,36 @@
   color: var(--color-deep-red);
 }
 
-/* Responsive Design */
-@media (max-width: 991px) {
+/* Enhanced Responsive Design */
+
+/* Large Tablets and Small Desktops (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
   .header__container {
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
+  }
+
+  .nav__list {
+    gap: var(--space-lg);
   }
 }
 
-@media (max-width: 767px) {
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__container {
+    padding: 0 var(--space-md);
+  }
+
+  .nav__list {
+    gap: var(--space-md);
+  }
+
+  .logo__text-container {
+    margin-left: var(--space-xs);
+  }
+}
+
+/* Mobile Landscape and Small Tablets (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
   .header__nav {
     display: none;
   }
@@ -232,40 +261,46 @@
     padding: 0 var(--space-sm);
   }
 
-  .logo__text {
-    font-size: 1.5rem;
-  }
-
-  .logo__subtitle {
-    font-size: 0.7rem;
+  .logo__text-container {
+    display: block;
   }
 }
 
-@media (max-width: 575px) {
+/* Mobile Portrait (320px to 479px) */
+@media (max-width: 479px) {
+  .header__nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
   .header__container {
-    height: 70px;
+    padding: 0 var(--space-sm);
+    height: clamp(60px, 10vh, 70px);
+  }
+
+  .logo__text-container {
+    display: none;
+  }
+
+  .logo__image {
+    height: clamp(40px, 8vw, 50px);
+    width: clamp(40px, 8vw, 50px);
+  }
+}
+
+/* Very Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .header__container {
     padding: 0 var(--space-xs);
+    height: 60px;
   }
 
-  .logo__text {
-    font-size: 1.3rem;
-  }
-
-  .logo__subtitle {
-    font-size: 0.65rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .header__container {
-    height: 65px;
-  }
-
-  .logo__text {
-    font-size: 1.2rem;
-  }
-
-  .logo__subtitle {
-    font-size: 0.6rem;
+  .logo__image {
+    height: 40px;
+    width: 40px;
+    padding: 4px;
   }
 }

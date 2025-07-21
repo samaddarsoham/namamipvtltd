@@ -77,12 +77,16 @@ const About = () => {
           </div>
 
           <div className="about-page__cta">
-            <a href="/products" className="btn btn--primary btn--large">
-              Explore Our Products
-            </a>
-            <a href="/contact" className="btn btn--secondary btn--large">
-              Get in Touch
-            </a>
+            <h3>Ready to Start Your Project?</h3>
+            <p>Partner with us for premium wood solutions and experience the difference of working with Eastern India's trusted distributor.</p>
+            <div className="about-cta-buttons">
+              <a href="/products" className="btn btn--primary btn--large">
+                Explore Our Products
+              </a>
+              <a href="/contact" className="btn btn--secondary btn--large">
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
       </div>

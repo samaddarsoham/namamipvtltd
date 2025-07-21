@@ -110,7 +110,7 @@ const IndustriesSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="industries-section py-20 bg-white">
+    <section ref={sectionRef} className="industries-section py-20 bg-white mobile-center-all">
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
