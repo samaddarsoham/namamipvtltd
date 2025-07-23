@@ -313,6 +313,104 @@
   }
 }
 
+/* All Mobile Devices - Comprehensive Timeline Fix (up to 767px) */
+@media (max-width: 767px) {
+  .about-page__container {
+    max-width: 100%;
+    padding: 0 var(--space-sm);
+  }
+
+  .about-page__content {
+    max-width: 100%;
+    padding: 0 var(--space-xs);
+  }
+
+  .about-timeline {
+    padding: var(--space-lg) 0;
+    overflow-x: hidden;
+  }
+
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: clamp(var(--space-xl), 6vh, var(--space-3xl)) !important;
+    gap: var(--space-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    position: relative !important;
+  }
+
+  .timeline-year {
+    position: static !important;
+    flex: none !important;
+    width: clamp(80px, 15vw, 100px) !important;
+    height: clamp(80px, 15vw, 100px) !important;
+    font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+    margin: 0 auto var(--space-sm) !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  .timeline-year__image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+  }
+
+  .timeline-year__fallback {
+    font-size: clamp(1rem, 2.5vw, 1.4rem) !important;
+  }
+
+  .timeline-content {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: clamp(var(--space-md), 4vw, var(--space-lg)) !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .timeline-content--left-year {
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .timeline-content h3 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
+    margin-bottom: var(--space-sm) !important;
+    text-align: center !important;
+  }
+
+  .timeline-content p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+  }
+
+  .timeline-content__year {
+    display: none !important; /* Hide duplicate year display */
+  }
+
+  /* Remove any absolute positioning elements on mobile */
+  .timeline-item::before,
+  .timeline-item::after {
+    display: none !important;
+  }
+}
+
 /* Small Tablets and Mobile Landscape (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .about-page__container {

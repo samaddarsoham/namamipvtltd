@@ -525,6 +525,8 @@
   background: var(--bg-primary);
   position: relative;
   padding: clamp(var(--space-2xl), 8vh, var(--space-4xl)) 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .why-choose-section::before {
@@ -544,6 +546,8 @@
   grid-template-columns: 1fr;
   gap: clamp(var(--space-lg), 4vw, var(--space-2xl));
   margin-bottom: clamp(var(--space-xl), 5vh, var(--space-3xl));
+  width: 100%;
+  max-width: 100%;
 }
 
 .feature-card {
@@ -555,7 +559,9 @@
   transition: all 0.3s ease;
   text-align: center;
   max-width: 100%;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -612,6 +618,8 @@
   text-align: center;
   width: 100%;
   max-width: 280px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 .achievements-section {
@@ -862,6 +870,51 @@
 }
 
 /* Enhanced Mobile-First Responsive Design for Why Choose Us */
+
+/* All Mobile Devices (up to 767px) - Comprehensive Fix */
+@media (max-width: 767px) {
+  .why-choose-section {
+    padding: clamp(var(--space-lg), 4vh, var(--space-2xl)) 0;
+  }
+
+  .why-choose-section .container-custom {
+    padding: 0 var(--space-sm);
+    max-width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: clamp(var(--space-md), 3vw, var(--space-lg));
+    padding: 0;
+    margin-bottom: clamp(var(--space-lg), 4vh, var(--space-2xl));
+  }
+
+  .feature-card {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(var(--space-md), 3vw, var(--space-lg));
+    box-sizing: border-box;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr !important;
+    gap: clamp(var(--space-sm), 2vw, var(--space-md));
+    padding: 0;
+  }
+
+  .achievement-badge {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .value-content {
+    grid-template-columns: 1fr !important;
+    gap: clamp(var(--space-md), 3vw, var(--space-lg));
+  }
+}
 
 /* Mobile Portrait (320px to 479px) - Force Center Alignment */
 @media (max-width: 479px) {
