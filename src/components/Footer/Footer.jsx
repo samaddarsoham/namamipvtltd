@@ -14,9 +14,17 @@ const Footer = () => {
               Leading CenturyPly distributor in Eastern India, trusted by leading builders and industries since 2009.
             </p>
             <div className="footer__social">
-              <a href="https://linkedin.com/company/namami-plyboard-pvt-ltd" target="_blank" rel="noopener noreferrer" className="footer__social-link">
-                LinkedIn
-              </a>
+              <h4 className="footer__social-title">Follow Us</h4>
+              <div className="footer__social-links">
+                <a href="https://linkedin.com/company/namami-plyboard-pvt-ltd" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+                  <span className="footer__social-icon">📧</span>
+                  LinkedIn
+                </a>
+                <a href="https://instagram.com/namamiplyboard" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+                  <span className="footer__social-icon">📷</span>
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
 

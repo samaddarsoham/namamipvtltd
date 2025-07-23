@@ -19,6 +19,8 @@ html {
   scroll-padding-top: 80px;
   overflow-x: hidden;
   overflow-y: auto;
+  /* Prevent browser scroll restoration */
+  scroll-restoration: manual;
 }
 
 body {

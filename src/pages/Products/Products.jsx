@@ -184,9 +184,16 @@ const Products = () => {
                     e.target.parentElement.style.background = 'linear-gradient(135deg, var(--color-gray-light), var(--color-gray-medium))';
                   }}
                 />
-                <button 
+                <button
                   type="button"
-                  onClick={() => setSelectedProduct(product)}
+                  onClick={() => {
+                    setSelectedProduct(product);
+                    // Scroll to top when popup opens
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'smooth'
+                    });
+                  }}
                   className="product-card__cta"
                 >
                   View Brands

@@ -39,11 +39,48 @@ function ScrollToTop() {
 
 function App() {
   useEffect(() => {
+    // Always start from top on page load/reload
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      })
+
+      // Also reset document scroll
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }
+
+    // Immediate scroll to top
+    scrollToTop()
+
+    // Handle page refresh/reload
+    const handleBeforeUnload = () => {
+      scrollToTop()
+    }
+
+    // Handle page load
+    const handleLoad = () => {
+      scrollToTop()
+    }
+
     // Use native smooth scrolling instead of Locomotive Scroll for better navigation
     document.documentElement.style.scrollBehavior = 'smooth'
 
+    // Prevent scroll restoration by browser
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+
+    // Add event listeners
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    window.addEventListener('load', handleLoad)
+
     return () => {
       document.documentElement.style.scrollBehavior = 'auto'
+      window.removeEventListener('beforeunload', handleBeforeUnload)
+      window.removeEventListener('load', handleLoad)
     }
   }, [])
 

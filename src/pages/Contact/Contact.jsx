@@ -116,15 +116,25 @@ const Contact = () => {
             <h3>Find Us</h3>
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.599044793401!2d88.31344731441787!3d22.59338403762254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277c5333ea2e7%3A0x9c1018a8505ce075!2sNamami+Plyboard+Pvt+Ltd!5e0!3m2!1sen!2sin!4v1690273946284!5m2!1sen!2sin&markers=color:red%7C22.59338403762254,88.31344731441787"
+                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Namami%20Plyboard%20Pvt%20Ltd%20Choudhary%20Towers%2042%20Andul%20Road%20Hanskhali%20Pool%20Bakultala%20Howrah%20711109&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Namami Plyboard Location - Choudhary Towers, 42 Andul Road"
+                title="Namami Plyboard Pvt Ltd - Choudhary Towers, 42 Andul Road, Hanskhali Pool, Bakultala, Howrah - 711109"
               ></iframe>
+              <div className="map-link">
+                <a
+                  href="https://maps.app.goo.gl/BePc2Et64Ecys2eE8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-directions-btn"
+                >
+                  📍 Get Directions to Our Office
+                </a>
+              </div>
             </div>
           </motion.div>
 

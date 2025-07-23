@@ -211,6 +211,34 @@
   box-shadow: var(--shadow-golden);
 }
 
+.map-link {
+  margin-top: var(--space-md);
+  text-align: center;
+}
+
+.map-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: linear-gradient(135deg, var(--color-deep-red), #a0261e);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid transparent;
+}
+
+.map-directions-btn:hover {
+  background: linear-gradient(135deg, var(--color-royal-gold), #b8860b);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--color-royal-gold);
+}
+
 /* Contact Page CTA */
 .contact-page__cta {
   text-align: center;

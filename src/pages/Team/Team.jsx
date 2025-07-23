@@ -6,12 +6,13 @@ const teamMembers = [
   {
     name: "Mr. Vineet Fatehpuria",
     phone: "+91 9831275519",
-    image: "/images/VineetFatehpuria.png",
+    image: "/images/VineetFatehpuria.webp",
   },
   {
     name: "Mr. Suresh Aggarwal",
     phone: "+91 9830968432",
-    image: "/images/SureshAggarwal.png",
+    image: "/images/SureshAggarwal.webp",
+    
   },
 ];
 
