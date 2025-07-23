@@ -5,6 +5,27 @@ import './Products.css'
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Brand catalogue mapping
+  const brandCatalogues = {
+    "CenturyPly": "https://drive.google.com/file/d/1DmwcLavvCwL69dfvoacPC-ES3tUR_4zp/view",
+    "Intim": "https://drive.google.com/file/d/1ebTj8OJFDhz_E5feeGrhaauY-ht3biLa/view",
+    "MarinoLam": "https://drive.google.com/file/d/1PeNJdh2R79TAbu8prXNVxLlYjQmiI9a6/view",
+    "New Mika by Greenlam Industries": "https://drive.google.com/file/d/1AIU2DhpQmiRKCKwf2JOjpGlB3IDqrI0y/view",
+    "Royal Touche": "https://drive.google.com/file/d/1gQ8eFj6z-zvLrKz4myqOzDOLWvcKwuJb/view"
+  };
+
+  // Function to handle brand catalogue opening (only for Laminates)
+  const handleBrandClick = (brandName, productName) => {
+    // Only allow catalogue opening for Laminates product
+    if (productName !== "Laminates") return;
+
+    const catalogueUrl = brandCatalogues[brandName];
+    if (catalogueUrl) {
+      window.open(catalogueUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   // Optimized Intersection Observer for scroll reveals
   useEffect(() => {
     const observerOptions = {
@@ -49,7 +70,7 @@ const Products = () => {
       types: ["Glossy Finish", "Matte Finish", "Textured Surface"],
       description: "High-quality decorative laminates for modern interiors",
       image: "/images/Laminates.jpg",
-      brands: ["New Mika by Greenlam Industries", "Royale Touch", "Century", "Merino", "Intim"]
+      brands: ["New Mika by Greenlam Industries", "Royal Touche", "CenturyPly", "MarinoLam", "Intim"]
     },
     {
       id: 3,
@@ -73,7 +94,7 @@ const Products = () => {
       types: ["Solid Core", "Hollow Core", "Fire Resistant"],
       description: "Durable and elegant flush doors for residential and commercial use",
       image: "/images/FlushDoors.jpg",
-      brands: ["Century", "Rhyno Tuff (Full Pine)"]
+      brands: ["CenturyPly", "Rhyno Tuff (Full Pine)"]
     },
     {
       id: 6,
@@ -97,7 +118,7 @@ const Products = () => {
       types: ["WPC Plywood", "PVC Decorative Laminates", "High Gloss Laminates"],
       description: "Modern WPC plywood and PVC laminates for contemporary designs",
       image: "/images/wpc.png",
-      brands: ["Treand", "Advance", "Acrylic", "Ellena"]
+      brands: ["Trend", "Advance", "Acrylic", "Ellena"]
     }
   ]
 
@@ -119,17 +140,17 @@ const Products = () => {
           <p className="company-brands-tagline">Your One-Stop Destination for Premium Ply & Laminate Brands</p>
           <div className="company-brands">
             {[
-              "Century Ply",
+              "CenturyPly",
               "Rhyno Tuff",
               "Glacier Gold",
               "Adhunik Ultra",
               "Bell Ply",
               "Greenlam Industries",
-              "Royale Touch",
-              "Merino",
+              "Royal Touche",
+              "MarinoLam",
               "Intim",
               "GreenPly",
-              "Treand",
+              "Trend",
               "Advance",
               "Acrylic",
               "Ellena"
@@ -227,12 +248,29 @@ const Products = () => {
             </button>
             <h2>Available Brands for {selectedProduct.name}</h2>
             <div className="product-dialog__brands">
-              {selectedProduct.brands && selectedProduct.brands.map((brand, index) => (
-                <div key={index} className="product-dialog__brand">
-                  {brand}
-                </div>
-              ))}
+              {selectedProduct.brands && selectedProduct.brands.map((brand, index) => {
+                // Only show catalogues for Laminates product
+                const isLaminatesProduct = selectedProduct.name === "Laminates";
+                const hasCatalogue = isLaminatesProduct && brandCatalogues[brand];
+
+                return (
+                  <div
+                    key={index}
+                    className={`product-dialog__brand ${hasCatalogue ? 'product-dialog__brand--clickable' : ''}`}
+                    onClick={() => hasCatalogue && handleBrandClick(brand, selectedProduct.name)}
+                    title={hasCatalogue ? `View ${brand} Catalogue` : brand}
+                  >
+                    {brand}
+                    {hasCatalogue && <span className="catalogue-icon">📄</span>}
+                  </div>
+                );
+              })}
             </div>
+            {selectedProduct.name === "Laminates" && (
+              <p className="catalogue-hint">
+                💡 Click on brands with 📄 icon to view their catalogues
+              </p>
+            )}
             <div className="product-dialog__actions">
               <Link 
                 to="/contact" 

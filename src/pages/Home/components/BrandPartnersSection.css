@@ -1,5 +1,7 @@
 /* Brand Partners Section Styles */
 .brand-partners-section {
+  padding: var(--space-3xl) 0;
+  background: var(--color-gray-light);
   position: relative;
   overflow: hidden;
 }

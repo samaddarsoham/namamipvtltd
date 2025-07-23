@@ -18,12 +18,12 @@ const BrandPartnersSection = () => {
       description: "Adhesives & Construction Chemicals"
     },
     {
-      name: "Merino",
+      name: "MarinoLam",
       logo: "/companylogos/merino-removebg-preview.png",
       description: "Decorative Laminates"
     },
     {
-      name: "Royale Touch",
+      name: "Royal Touche",
       logo: "/companylogos/royale_touch-removebg-preview.png",
       description: "Premium Laminates"
     },
@@ -61,7 +61,7 @@ const BrandPartnersSection = () => {
   }, [])
 
   return (
-    <section className="brand-partners-section py-12 bg-gradient-to-r from-gray-50 to-blue-50 mobile-center-all">
+    <section className="brand-partners-section mobile-center-all">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -70,12 +70,8 @@ const BrandPartnersSection = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Our Brand Partners
-          </h2>
-          <p className="text-gray-600 text-sm md:text-base">
-            Trusted distributor of premium quality brands
-          </p>
+          <h2 className="section-title">Our Brand Partners</h2>
+          <p className="section-subtitle">Trusted distributor of premium quality brands</p>
         </motion.div>
 
         <motion.div

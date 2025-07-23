@@ -7,6 +7,7 @@ import About from './pages/About/About'
 import Products from './pages/Products/Products'
 import Contact from './pages/Contact/Contact'
 import LoadingScreen from './components/LoadingScreen/LoadingScreen'
+import FloatingContactButtons from './components/FloatingContactButtons/FloatingContactButtons'
 import './styles/global.css'
 import './styles/responsive.css'
 import Team from './pages/Team/Team'
@@ -59,9 +60,12 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Catch-all route for 404 - redirects to home */}
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <Footer />
+        <FloatingContactButtons />
       </div>
     </Router>
   )
