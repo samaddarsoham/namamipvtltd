@@ -8,9 +8,9 @@ const BrandPartnersSection = () => {
   
   const brandLogos = [
     {
-      name: "CenturyPly",
+      name: "intim",
       logo: "/companylogos/1630622459056-removebg-preview.png",
-      description: "Premium Plywood & Laminates"
+      description: "Premium Laminates"
     },
     {
       name: "Pidilite",
@@ -18,22 +18,22 @@ const BrandPartnersSection = () => {
       description: "Adhesives & Construction Chemicals"
     },
     {
-      name: "MarinoLam",
+      name: "MerinoLam",
       logo: "/companylogos/merino-removebg-preview.png",
       description: "Decorative Laminates"
     },
     {
-      name: "Royal Touche",
+      name: "Royale Touche",
       logo: "/companylogos/royale_touch-removebg-preview.png",
       description: "Premium Laminates"
     },
     {
-      name: "Quality Partner",
+      name: "CenturyPly",
       logo: "/companylogos/Capture-removebg-preview.png",
       description: "Building Materials"
     },
     {
-      name: "Trusted Brand",
+      name: "New Mika",
       logo: "/companylogos/images-removebg-preview.png",
       description: "Premium Solutions"
     }

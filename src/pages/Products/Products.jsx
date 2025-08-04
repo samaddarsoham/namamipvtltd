@@ -9,10 +9,10 @@ const Products = () => {
   // Brand catalogue mapping
   const brandCatalogues = {
     "CenturyPly": "https://drive.google.com/file/d/1DmwcLavvCwL69dfvoacPC-ES3tUR_4zp/view",
-    "Intim": "https://drive.google.com/file/d/1ebTj8OJFDhz_E5feeGrhaauY-ht3biLa/view",
-    "MarinoLam": "https://drive.google.com/file/d/1PeNJdh2R79TAbu8prXNVxLlYjQmiI9a6/view",
+    "Intim": "https://drive.google.com/file/d/1nuXg-TB8EcJQ2gT5wSuLSZP9JLvUA8tr/view?usp=sharing",
+    "MerinoLam": "https://drive.google.com/file/d/1PeNJdh2R79TAbu8prXNVxLlYjQmiI9a6/view",
     "New Mika by Greenlam Industries": "https://drive.google.com/file/d/1AIU2DhpQmiRKCKwf2JOjpGlB3IDqrI0y/view",
-    "Royal Touche": "https://drive.google.com/file/d/1gQ8eFj6z-zvLrKz4myqOzDOLWvcKwuJb/view"
+    "Royale Touche": "https://drive.google.com/file/d/1gQ8eFj6z-zvLrKz4myqOzDOLWvcKwuJb/view"
   };
 
   // Function to handle brand catalogue opening (only for Laminates)
@@ -70,7 +70,7 @@ const Products = () => {
       types: ["Glossy Finish", "Matte Finish", "Textured Surface"],
       description: "High-quality decorative laminates for modern interiors",
       image: "/images/Laminates.jpg",
-      brands: ["New Mika by Greenlam Industries", "Royal Touche", "CenturyPly", "MarinoLam", "Intim"]
+      brands: ["New Mika by Greenlam Industries", "Royale Touche", "CenturyPly", "MerinoLam", "Intim"]
     },
     {
       id: 3,
@@ -146,8 +146,8 @@ const Products = () => {
               "Adhunik Ultra",
               "Bell Ply",
               "Greenlam Industries",
-              "Royal Touche",
-              "MarinoLam",
+              "Royale Touche",
+              "MerinoLam",
               "Intim",
               "GreenPly",
               "Trend",
